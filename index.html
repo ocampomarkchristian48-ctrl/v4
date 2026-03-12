@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mind Logic</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 class="title">MIND LOGIC</h1>
+
+<!-- START SCREEN -->
+
+<div id="startScreen" class="screen">
+
+<h2>Enter Your Name</h2>
+
+<input id="playerName" placeholder="Your name">
+
+<button onclick="startGame()">Start Game</button>
+
+</div>
+
+
+<!-- DESCRIPTION -->
+
+<div id="instructions" class="screen hidden">
+
+<h2>Game Description</h2>
+
+<p>
+Mind Logic is a puzzle game that challenges your reasoning,
+probability knowledge, and logical thinking skills.
+</p>
+
+<p>
+In the first challenge, you will analyze a mystery bag filled
+with colored balls and determine the correct probabilities
+when drawing them randomly.
+</p>
+
+<p>
+In the second challenge, you must analyze logical clues to
+determine the profession of three characters:
+<b>Ana, Ben, and Cara.</b>
+</p>
+
+<p>
+Think carefully, analyze the clues, and choose the correct
+answers to achieve the highest score!
+</p>
+
+<button onclick="startLevel1()">Start Puzzle</button>
+
+</div>
+
+
+<!-- LEVEL 1 : MYSTERY BAG -->
+
+<div id="level1" class="screen hidden">
+
+<h2>Mystery Bag</h2>
+
+<p>A bag contains:</p>
+
+<div class="balls">
+
+<div class="row">
+<div class="ball red"></div>
+<div class="ball red"></div>
+<div class="ball red"></div>
+<div class="ball red"></div>
+<div class="ball red"></div>
+<span>Red (5)</span>
+</div>
+
+<div class="row">
+<div class="ball blue"></div>
+<div class="ball blue"></div>
+<div class="ball blue"></div>
+<span>Blue (3)</span>
+</div>
+
+<div class="row">
+<div class="ball green"></div>
+<div class="ball green"></div>
+<span>Green (2)</span>
+</div>
+
+</div>
+
+<h3 id="question"></h3>
+
+<div id="choices" class="choices"></div>
+
+</div>
+
+
+<!-- LEVEL 2 : LOGIC PUZZLE -->
+
+<div id="level2" class="screen hidden">
+
+<h2>Who is the Doctor?</h2>
+
+<div class="clues">
+
+<p>1. Anyone who is a doctor studied medicine.</p>
+<p>2. Ben is NOT a teacher.</p>
+<p>3. Ana is NOT an engineer.</p>
+<p>4. Cara is NOT a doctor.</p>
+<p>5. If someone is not a doctor and not an engineer, they are a teacher.</p>
+
+</div>
+
+<div class="characters">
+
+<div class="person">
+
+<img src="https://cdn-icons-png.flaticon.com/512/921/921071.png">
+
+<h3>Ana</h3>
+
+<select id="ana">
+<option>Doctor</option>
+<option>Teacher</option>
+<option>Engineer</option>
+</select>
+
+</div>
+
+
+<div class="person">
+
+<img src="https://cdn-icons-png.flaticon.com/512/921/921089.png">
+
+<h3>Ben</h3>
+
+<select id="ben">
+<option>Doctor</option>
+<option>Teacher</option>
+<option>Engineer</option>
+</select>
+
+</div>
+
+
+<div class="person">
+
+<img src="https://cdn-icons-png.flaticon.com/512/921/921124.png">
+
+<h3>Cara</h3>
+
+<select id="cara">
+<option>Doctor</option>
+<option>Teacher</option>
+<option>Engineer</option>
+</select>
+
+</div>
+
+</div>
+
+<button onclick="checkLogic()">Submit Answer</button>
+
+</div>
+
+
+<!-- END -->
+
+<div id="endScreen" class="screen hidden">
+
+<h2 id="finalScore"></h2>
+
+<button onclick="location.reload()">Play Again</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
