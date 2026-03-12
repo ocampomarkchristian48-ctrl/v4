@@ -115,14 +115,14 @@ document.getElementById("level2").classList.remove("hidden")
 
 function checkLogic(){
 
-let ana=document.getElementById("ana").value
-let ben=document.getElementById("ben").value
+let ana=document.getElementById("ben").value
+let ben=document.getElementById("ana").value
 let cara=document.getElementById("cara").value
 
 if(
 
+ben=="Engineering" &&
 ana=="Teacher" &&
-ben=="Engineer" &&
 cara=="Doctor"
 
 ){
